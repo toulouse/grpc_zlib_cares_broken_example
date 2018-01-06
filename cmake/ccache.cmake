@@ -1,0 +1,7 @@
+if(NOT DEFINED CMAKE_CXX_COMPILER_LAUNCHER)
+    find_program(CCACHE ccache)
+    if(CCACHE)
+       message(STATUS "Using ccache: ${CCACHE}")
+        set(CMAKE_CXX_COMPILER_LAUNCHER ${CCACHE})
+    endif()
+endif()
